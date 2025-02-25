@@ -12,6 +12,30 @@ Ethereum, Arbitrum.
 https://tech.usual.money/smart-contracts/contract-deployments
 ___
 
+### Q: If you are integrating tokens, are you allowing only whitelisted tokens to work with the codebase or any complying with the standard? Are they assumed to have certain properties, e.g. be non-reentrant? Are there any types of [weird tokens](https://github.com/d-xo/weird-erc20) you want to integrate?
+The token contracts used in each repository are known in advance and there is no use of arbitrary tokens in any contracts.
+
+We are currently supporting as RWAs Tokens:
+
+USYC by Hashnote
+UsualM , wrapping smartM (aka wrappedM) by M^0
+eUSD0 ( OUT OF SCOPE!)
+
+We are going to support
+UsualUSDtB, wrapping USDtB by Ethena
+
+
+Any future RWA's are implied to follow similar specs as the ones above.
+
+For the SwapperEngine, we are using USDC by Circle.
+
+Issues stemming from potential different future implementations of these Tokens are out of scope.
+
+Any behaviour from the Tokencontracts above is intentional and do not qualify as attack vectors.
+
+There is no need to analyze potential use/integration of any other token code (which could potentially have weird behaviour) in any of the modules.
+___
+
 ### Q: Are there any limitations on values set by admins (or other roles) in the codebase, including restrictions on array lengths?
 No.
 ___
@@ -82,22 +106,38 @@ Issues related to centralization risks are out of scope.
 
 Issues related to SwapperEngine if the underlying isn't USDC / Circle is compromised are out of scope.
 
+
+In this contest, issues found in specific smart contracts are considered **high-priority** and will be rewarded at the standard payout rates. These contracts are:  
+
+- **USD0**  
+- **USD0PP**  
+- **DaoCollateral**  
+- **RegistryAccess**  
+- **RegistryContract**  
+- **ClassicalOracle** (excluding **UsualOracle**)  
+- **SwapperEngine**  
+- **UsualUSDtB**  
+- **UsualM**  
+
+Issues found in any **other contracts** outside of this list are still valuable but will receive **adjusted payouts**:  
+
+- **Medium-severity issues** in these contracts will be rewarded at **50% of a Medium payout**(choose Medium Unimportant severity)  
+- **High-severity issues** in these contracts will be rewarded at **50% of a High payout**(choose High Unimportant severity)
+
+Additionally, this contest features an **unlocking prize pool**, which is determined by the severity of the issues found:  
+
+- **$80,000** if no Medium or High-severity issues are found in high-priority contracts.  
+- **$100,000** if at least one Medium-severity issue is found in a high-priority contract **or** if a High-severity issue is found in a low-priority contract.  
+- **$200,000** if at least one High-severity issue is found in a high-priority contract.  
+
+To unlock the higher prize pool, the Medium or High-severity issue **must be found in a high-priority contract**—except for the **$100,000 tier**, which can also be unlocked by a High-severity issue in a low-priority contract. If only Medium-severity issues are found in lower-priority contracts, the prize pool will **not** be unlocked, and the **$80,000** will be split fully among the auditors who reported those issues.  
+
+The general rule is that an issue must **impact the functionality** of one of the high-priority contracts to receive full rewards and contribute toward unlocking the highest prize pool.
+
+
 ------- Regarding Findings/Severity ( TVL is assumed at ONE BILLION USD ) -------
 
-
 Severity Matrix for Core Stablecoin Protocol + RWA Token Wrapper Contracts ( UsualUSDtB, UsualM)
-
-Contracts + imported files
-USD0
-USD0PP
-DaoCollateral
-RegistryAccess
-RegistryContract
-ClassicalOracle minus UsualOracle
-SwapperEngine 
-UsualUSDtB
-UsualM
-
 
 High
 An issue that results in the loss, theft, waste, or permanent freezing of 5%-100% of the total TVL.  
@@ -111,14 +151,16 @@ Issues that can be remedied by RWA Token Governance / Usual Token Governance bur
 
 Severity Matrix for Usual Token & Distribution Module, UsualX, Usual*, Airdrop ( everything outside of the files above)
 
-High findings here aren't considered in unlocking the high pot. 50% of the finding value of Core Protocol/Wrapper
-
 High
 An issue that results in the theft of 10%-100% of the current Usual supply. 
 
 Medium
 An issue that results in the theft of 5%-10% of the current Usual supply. 
 
+
+----- REGARDING FINDINGS ON DEPLOYED CONTRACTS -----
+
+Any vulnerability involving already deployed core contracts must not be disclosed publicly or to any other person, entity or email address before Usual Labs has been notified, has fixed the issue, and has granted permission for disclosure in the competition. In addition, disclosure must be made within 24 hours following discovery of the vulnerability. Additional compensation outside of the competition prize pool can also be granted optionally by Usual Labs.
 
 
 # Audit scope
