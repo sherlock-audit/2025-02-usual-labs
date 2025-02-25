@@ -17,13 +17,9 @@ The token contracts used in each repository are known in advance and there is no
 
 We are currently supporting as RWAs Tokens:
 
-USYC by Hashnote
-UsualM , wrapping smartM (aka wrappedM) by M^0
-eUSD0 ( OUT OF SCOPE!)
+USYC by Hashnote UsualM , wrapping smartM (aka wrappedM) by M^0 eUSD0 ( OUT OF SCOPE!)
 
-We are going to support
-UsualUSDtB, wrapping USDtB by Ethena
-
+We are going to support UsualUSDtB, wrapping USDtB by Ethena
 
 Any future RWA's are implied to follow similar specs as the ones above.
 
@@ -161,6 +157,8 @@ An issue that results in the theft of 5%-10% of the current Usual supply.
 ----- REGARDING FINDINGS ON DEPLOYED CONTRACTS -----
 
 Any vulnerability involving already deployed core contracts must not be disclosed publicly or to any other person, entity or email address before Usual Labs has been notified, has fixed the issue, and has granted permission for disclosure in the competition. In addition, disclosure must be made within 24 hours following discovery of the vulnerability. Additional compensation outside of the competition prize pool can also be granted optionally by Usual Labs.
+
+
 
 
 # Audit scope
