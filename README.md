@@ -140,6 +140,15 @@ Any vulnerability involving already deployed core contracts must not be disclose
 
 # Audit scope
 
+[usual-m @ 5f9b256a103ac91aa0605507d94b8766ae8601d3](https://github.com/m0-foundation/usual-m/tree/5f9b256a103ac91aa0605507d94b8766ae8601d3)
+- [usual-m/src/oracle/AggregatorV3Interface.sol](usual-m/src/oracle/AggregatorV3Interface.sol)
+- [usual-m/src/oracle/NAVProxyMPriceFeed.sol](usual-m/src/oracle/NAVProxyMPriceFeed.sol)
+- [usual-m/src/usual/UsualM.sol](usual-m/src/usual/UsualM.sol)
+- [usual-m/src/usual/constants.sol](usual-m/src/usual/constants.sol)
+- [usual-m/src/usual/interfaces/IRegistryAccess.sol](usual-m/src/usual/interfaces/IRegistryAccess.sol)
+- [usual-m/src/usual/interfaces/IUsualM.sol](usual-m/src/usual/interfaces/IUsualM.sol)
+- [usual-m/src/usual/interfaces/IWrappedMLike.sol](usual-m/src/usual/interfaces/IWrappedMLike.sol)
+
 [pegasus @ f567a2f6ec952b8f277cc33f807ee9ed555715d9](https://github.com/usual-dao/pegasus/tree/f567a2f6ec952b8f277cc33f807ee9ed555715d9)
 - [pegasus/packages/solidity/shared/MarketParamsLib.sol](pegasus/packages/solidity/shared/MarketParamsLib.sol)
 - [pegasus/packages/solidity/shared/interfaces/curve/ICurveFactory.sol](pegasus/packages/solidity/shared/interfaces/curve/ICurveFactory.sol)
@@ -209,14 +218,5 @@ Any vulnerability involving already deployed core contracts must not be disclose
 - [usual-usdtb/src/usual/interfaces/IRegistryAccess.sol](usual-usdtb/src/usual/interfaces/IRegistryAccess.sol)
 - [usual-usdtb/src/usual/interfaces/IUsdtb.sol](usual-usdtb/src/usual/interfaces/IUsdtb.sol)
 - [usual-usdtb/src/usual/interfaces/IUsualUSDTB.sol](usual-usdtb/src/usual/interfaces/IUsualUSDTB.sol)
-
-[usual-m @ 5f9b256a103ac91aa0605507d94b8766ae8601d3](https://github.com/m0-foundation/usual-m/tree/5f9b256a103ac91aa0605507d94b8766ae8601d3)
-- [usual-m/src/oracle/AggregatorV3Interface.sol](usual-m/src/oracle/AggregatorV3Interface.sol)
-- [usual-m/src/oracle/NAVProxyMPriceFeed.sol](usual-m/src/oracle/NAVProxyMPriceFeed.sol)
-- [usual-m/src/usual/UsualM.sol](usual-m/src/usual/UsualM.sol)
-- [usual-m/src/usual/constants.sol](usual-m/src/usual/constants.sol)
-- [usual-m/src/usual/interfaces/IRegistryAccess.sol](usual-m/src/usual/interfaces/IRegistryAccess.sol)
-- [usual-m/src/usual/interfaces/IUsualM.sol](usual-m/src/usual/interfaces/IUsualM.sol)
-- [usual-m/src/usual/interfaces/IWrappedMLike.sol](usual-m/src/usual/interfaces/IWrappedMLike.sol)
 
 
